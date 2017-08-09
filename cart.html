@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/cart.css" />
+	</head>
+
+	<body>
+		<div id="header">
+			<!--引入头部-->
+		</div>
+
+		<div id="content" class="clear marginOuter">
+			<div class="aside">
+				<!--引入左侧边栏-->
+			</div>
+			<div class="cart-list">
+				<div class="cart_name">我的购物车</div>
+				<div class="cart_sent_btn clear">
+					<a href="javascript:;">正常配送购物车</a>
+					<a href="javascript:;">延迟配送购物车<br/><span>8.21</span>开始配送</a>
+				</div>
+				<div class="cart_title">
+					<span>商品信息</span>
+					<span>商品单价</span>
+					<span>积分</span>
+					<span>数量</span>
+					<span>小计</span>
+				</div>
+				<div class="cart_tips">暂无商品信息</div>
+				<ul class="cart_content" id="cart_content">
+					<script id="cart_data" type="text/html">
+						{{each data as value}}
+						<li class="clear cart_list">
+							<input class="cart_check" type="checkbox" checked="checked" />
+							<a class="select" href="productionDetail.html?id={{value.id}}" target="_blank">
+								<img src="{{value.src[0]}}" />
+							</a>
+							<p>
+								<b>{{value.name}}</b>
+								<i><span>{{value.color[0]}}</span>
+								/
+								<span>{{value.size[0]}}</span></i>
+								<em class="clear">
+									<a href="javascript:;"></a>
+									<a href="javascript:;"></a>
+									<a class="cart_delete" href="javascript:;"></a>
+								</em>
+							</p>
+							<b class="cart_price">{{value.price[0]}}</b>
+							<i class="cart_sum">￥1</i>
+							<div class="cart_count">
+								<a class="reduce" href="javascript:;"></a>
+								<input type="text" value="{{value.num}}" />
+								<a class="add" href="javascript:;"></a>
+							</div>
+							<em class="cart_single">{{value.total}}</em>
+						</li>
+						{{/each}}
+					</script>
+				</ul>
+				<div class="cart_total clear">
+					<div class="cart_total_btn">
+						<input type="checkbox" checked="checked" />
+						<span>全选</span>
+					</div>
+					<div class="cart_total_content">
+						<p>
+							<span>商品金额</span>
+							<em>￥ 0</em>
+						</p>
+						<p>
+							<span>会员优惠</span>
+							<em>￥ 0</em>
+						</p>
+						<p>
+							<span>商品总计(配送费、进口税另计)</span>
+							<em>￥ 0</em>
+						</p>
+					</div>
+				</div>
+				<div class="cart_return_btn clear">
+					<a href="javascript:;">马上结算</a>
+					<a target="_blank" href="index.html">返回首页</a>
+
+				</div>
+			</div>
+
+		</div>
+
+		<div id="guarantee">
+			<!--引入尾部上-->
+		</div>
+
+		<div class="bottom">
+			<!--引入尾部下-->
+		</div>
+
+		<div class="right_bar">
+			<!--引入右侧边栏-->
+		</div>
+
+		<div class="bottom-fixed">
+			<!--引入右下角固定页-->
+		</div>
+
+		<div class="top_bar">
+			<!--头部导航栏-->
+		</div>
+
+		<div class="login-reginster">
+			<div id="login-outer">
+			</div>
+			<div class="login-page">
+				<div class="login-sec clear">
+					<a class="cur" href="javascript:;">普通会员登录</a>
+					<a href="javascript:;">批发会员登录</a>
+				</div>
+				<ul class="login-code clear">
+
+					<li><img src="../img/qrcode.png"></li>
+					<li>打开时尚起义APP<br>扫描二维码</li>
+					<li>账户登陆>></li>
+				</ul>
+				<div class="login-content">
+					<div class="login-attention"><strong>注意！</strong>普通会员和批发会员帐户不共享，请知晓！</div>
+					<div class="login-form clear">
+						<div class="login-input">
+							<input type="text" placeholder="电子邮件" />
+							<input type="password" placeholder="你的密码" />
+						</div>
+						<div class="login-btn">
+							<input type="button" value="登录">
+						</div>
+					</div>
+				</div>
+
+				<div class="register-common clear">
+					<div class="regiter-check ">
+						<p></p>
+						<input class="eal e-mail" placeholder="电子邮件 " />
+						<p></p>
+						<input class="psd " type="password" placeholder="您的密码 " />
+
+						<input type="password" placeholder="再次输入确认密码 " />
+						<p></p>
+						<input class="nae " placeholder="用户名 " type="text" />
+						<select>
+							<option selected="selected ">性别</option>
+							<option>男</option>
+							<option>女</option>
+						</select>
+						<p></p>
+						<input class="tel " placeholder="手机号码 " type="text" />
+						<input class="regword1 " type="text" />
+						<input class="regword2 " type="text " placeholder="验证码 " />
+						<br />
+						<input class="regiter-checked " type="checkbox" checked="checked " />
+						<span>我已阅读并同意《时尚起义用户使用条款》</span>
+					</div>
+					<div class="regiter-btn ">
+						<strong>注册<br><span>(送5元现金)</span></strong>
+						<em class="login-em ">老用户登录</em>
+					</div>
+				</div>
+				<div class="register-vip ">
+					<div class="register-step clear ">
+						<div>
+							<span>①</span>
+							<br>
+							<strong>填写会员信息</strong>
+							<br>请如实填写信息<br>便于联系
+						</div>
+						<div>
+							<span>②</span>
+							<br>
+							<strong>发送资料</strong>
+							<br>发送身份证、营业执照或店铺地址至<br>
+							<a href="javascript:;">shishangqiyi_2010@126.com</a> (注明注册ID)
+						</div>
+						<div>
+							<span>③</span>
+							<br>
+							<strong>客服审核</strong>
+							<br>请耐心等待审核<br>审核通过即可登录
+						</div>
+					</div>
+					<div class="register-check ">
+						<p></p>
+						<input class="eal e-mail" type="text" placeholder="电子邮件 " />
+						<p></p>
+						<input class="psd " type="password" placeholder="您的密码 " />
+
+						<input type="password" placeholder="再次输入确认密码 " />
+						<p></p>
+						<input class="nae " placeholder="用户名 " type="text" />
+						<select>
+							<option selected="selected ">性别</option>
+							<option>男</option>
+							<option>女</option>
+						</select>
+						<p></p>
+						<input class="tel " placeholder="手机号码 " />
+						<input class="regword1 " type="text" />
+						<input class="regword2 " type="text " placeholder="验证码 " />
+						<p></p>
+						<input class="eal adress" placeholder="您的详细地址 " />
+						<input class="regiter-checked " type="checkbox" checked="checked " />
+						<span>我已阅读并同意《时尚起义用户使用条款》</span>
+						<em class="login-em ">老用户登录</em>
+					</div>
+					<div class="regiter-btn ">
+						<strong>批发会员注册</strong>
+					</div>
+				</div>
+
+				<div class="login-tip clear ">
+					<input type="checkbox" checked="checked " />
+					<span>保存电子邮件</span>
+					<div class="pian ">
+						<a href="javascript:;">扫码登录 |</a>
+						<a class="cur " href="javascript:;">新用户注册</a>
+						|
+						<a href="javascript:;">忘记密码</a>
+						<a href="javascript:;">| 支付宝登录</a>
+					</div>
+				</div>
+				<i class="iconfont ">&#xe621;</i>
+			</div>
+		</div>
+
+		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/lunbo.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common_register_login.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

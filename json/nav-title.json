@@ -1,0 +1,76 @@
+{
+	"navList": [
+
+		{
+			"title": "最新商品",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "一周爆款",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "热卖商品",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "最佳口碑",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "上衣",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "衬衫",
+			"link": "javascript:;"
+		}, {
+			"title": "罩衫",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "外套",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "半身裙",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "连衣裙",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "裤装",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "鞋/包",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "配饰",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "内衣",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "SUMMER",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "运动装",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "美妆",
+			"link": "javascript:;"
+		}
+		, {
+			"title": "VAVI MELLO",
+			"link": "javascript:;"
+		}
+	]
+}

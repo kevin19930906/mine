@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情页</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/productionDetail.css" />
+	</head>
+
+	<body>
+		<div id="header">
+			<!--引入头部-->
+		</div>
+
+		<div id="content" class="clear marginOuter">
+			<div class="aside">
+				<!--引入左侧边栏-->
+			</div>
+
+			<div class="productionDetail clear">
+				<script id="detailData" type="text/html">
+					<h3>{{title}}</h3>
+					<div class="detail-top clear">
+						<div class="productionDetai-l">
+							<div class="zoomArea">
+								<div class="middleArea">
+									<img src="{{src[0]}}" />
+									<div class="zoom"></div>
+								</div>
+								<div class="bigArea">
+									<img src="{{src[0]}}" />
+								</div>
+							</div>
+							<div class="thumbnail-box">
+								<a href="javascript:;" class="btn btn-prev"></a>
+								<a href="javascript:;" class="btn btn-next"></a>
+								<div class="list">
+									<ul class="minArea clear">
+										{{each src as value}}
+										<li data-src="{{value}}">
+											<a href="javascript:;"><img src="{{value}}"></a>
+										</li>
+										{{/each}}
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="productionDetail-r">
+							<div class="goods_title">
+								<strong>{{name}}</strong>
+								<div class="goods_Gcodytext clearfix">
+									<h5>{{detail}}</h5>
+									<p>
+										<span>HOT!</span> <span>WEEKLY!</span>
+										<span>TOP!</span></p>
+								</div>
+							</div>
+							<div class="member_price">
+								<span>{{vip}}</span>
+								<a href="#">查看会员规则</a>
+							</div>
+
+							<div class="goods_price clear ">
+								<div class="sell_title ">售价</div>
+								<div class="sell_content ">
+									<span class="emoney ">{{price[1]}}</span>（积分 ¥ 1）
+								</div>
+							</div>
+							<div class="goods_color clear ">
+								<div class="sell_title ">颜色：</div>
+								<div class="sell_content ">
+									<select>
+										<option selected="selected ">请选择颜色</option>
+										{{each color as value}}
+										<option>{{value}}</option>
+										{{/each}}
+									</select>
+								</div>
+							</div>
+							<div class="goods_size clear ">
+								<div class="sell_title ">尺寸：</div>
+								<div class="sell_content ">
+									<select name="gsize ">
+										<option selected="selected ">请选择尺寸</option>
+										{{each size as value}}
+										<option>{{value}}</option>
+										{{/each}}
+									</select>
+								</div>
+							</div>
+							<div class="goods_qty clear">
+								<div class="sell_title">数量：</div>
+								<div class="sell_content">
+									<input type="text " value="1">
+									<a class="reduce" href="javascript:;"></a>
+									<a class="add" href="javascript:;"></a>
+								</div>
+							</div>
+							<div class="goods_buy clear ">
+								<a class="myzzim_btn " href="javascript:;">放入暂存架</a>
+								<a class="cart_btn " href="javascript:; ">加入购物车</a>
+								<div class="code_btn ">
+									扫一扫购买<i>&nbsp;</i>
+									<div class="codebox ">
+										<img src="img/app_code.jpg " />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="goods_nav_list">
+						<ul class="clear">
+							<li>
+								<a href=" javscript:; ">
+									<span>details</span><br />
+									<span>商品描述</span>
+								</a>
+							</li>
+							<li>
+								<a href=" javscript:; ">
+									<span>size info</span><br />
+									<span>商品信息</span>
+								</a>
+							</li>
+							<li>
+								<a href=" javscript:; ">
+									<span>coordinate</span><br />
+									<span>相关商品</span>
+								</a>
+							</li>
+							<li>
+								<a href=" javscript:; ">
+									<span>review</span><br />
+									<span>商品评论</span>
+								</a>
+							</li>
+							<li>
+								<a href=" javscript:; ">
+									<span>distribution</span><br />
+									<span>配送退货</span>
+								</a>
+							</li>
+
+						</ul>
+					</div>
+					<ul class="goods_information">
+						<li class="informationDetail">
+							<div class="goods_info">★~★ 简约条纹衬衫<br>
+								<br> ★~★ 打造我想要的感觉<br>
+								<br> ★~★ 宽松版型，修身效果好<br>
+								<br> ★~★ 四季都可穿的细条纹图案，可以穿很久<br>
+								<br> ★~★ 简洁大方的基本衬衫领口<br>
+								<br> ★~★ 胸部口袋很实用<br>
+								<br> ★~★ 适中宽袖口十分时尚<br>
+								<br> ★~★ 过臀部长度<br>
+								<br> ★~★ 利用里面肩绳 打造露肩效果，肩绳长度可调节<br>
+								<br> ★~★ 材质无弹力 <br>
+								<br> ★~★ 宽松版型，推荐66半以内穿<br>
+								<br> ★~★ 模特：天蓝色 均码 </div>
+
+							<div class="goods_img">
+								{{each src as value}}
+								<img src="{{value}}"> {{/each}}
+							</div>
+
+						</li>
+						<li>
+							<h3>
+							<span>size info</span><br />
+							<span>商品信息</span>
+						</h3>
+							<img src="img/information_size.jpg" />
+						</li>
+						<li>
+							<h3>
+							<span>model info</span><br />
+							<span>模特信息</span>
+						</h3>
+							<img src="img/model_info.jpg" />
+						</li>
+					</ul>
+					<ul class="comment">
+						<li>
+							<em>
+商品评论-中国 ( <span>1</span>)
+						</em>
+							<br />
+							<b>
+							只要你的评论真实、客观，就有机会获得1-5个积分！（请到我的账户确认已收货之后发表）
+						</b>
+						</li>
+						<li class="goods_momment">
+							<span>2017-07-31</span>
+							<a href="javascript:;">料子很凉快</a>
+							<span>3029*****</span>
+						</li>
+					</ul>
+					<ul class="comment">
+						<li>
+							<em>
+商品评论-韩国 ( <span>1</span>)
+						</em>
+							<br />
+							<b>
+							只要你的评论真实、客观，就有机会获得1-5个积分！（请到我的账户确认已收货之后发表）
+						</b>
+						</li>
+						<li class="goods_momment">
+							<span>2017-07-31</span>
+							<a href="javascript:;">料子很凉快</a>
+							<span>3029*****</span>
+						</li>
+					</ul>
+					<a href="javascript:;" class="question_btn">提问</a>
+					<h4>
+					<span>distribution</span><br />
+					<span>配送/退货</span>
+					</h4>
+					<div class="destribute">
+						<img src="img/destribute.jpg" />
+					</div>
+				</ul>
+			</div>
+			</script>
+		</div>
+		</div>
+		<div id="guarantee">
+			<!--引入尾部上-->
+		</div>
+
+		<div class="bottom ">
+			<!--引入尾部下-->
+		</div>
+
+		<div class="right_bar ">
+			<!--引入右侧边栏-->
+		</div>
+
+		<div class="bottom-fixed ">
+			<!--引入右下角固定页-->
+		</div>
+
+		<div class="top_bar ">
+			<!--头部导航栏-->
+		</div>
+		<div class="login-reginster">
+			<div id="login-outer">
+			</div>
+			<div class="login-page">
+				<div class="login-sec clear">
+					<a class="cur" href="javascript:;">普通会员登录</a>
+					<a href="javascript:;">批发会员登录</a>
+				</div>
+				<ul class="login-code clear">
+
+					<li><img src="img/qrcode.png"></li>
+					<li>打开时尚起义APP<br>扫描二维码</li>
+					<li>账户登陆>></li>
+				</ul>
+				<div class="login-content">
+					<div class="login-attention"><strong>注意！</strong>普通会员和批发会员帐户不共享，请知晓！</div>
+					<div class="login-form clear">
+						<div class="login-input">
+							<input type="text" placeholder="电子邮件" />
+							<input type="password" placeholder="你的密码" />
+						</div>
+						<div class="login-btn">
+							<input type="button" value="登录">
+						</div>
+					</div>
+				</div>
+
+				<div class="register-common clear">
+					<div class="regiter-check ">
+						<p></p>
+						<input class="eal e-mail" placeholder="电子邮件 " />
+						<p></p>
+						<input class="psd " type="password" placeholder="您的密码 " />
+
+						<input type="password" placeholder="再次输入确认密码 " />
+						<p></p>
+						<input class="nae " placeholder="用户名 " type="text" />
+						<select>
+							<option selected="selected ">性别</option>
+							<option>男</option>
+							<option>女</option>
+						</select>
+						<p></p>
+						<input class="tel " placeholder="手机号码 " type="text" />
+						<input class="regword1 " type="text" />
+						<input class="regword2 " type="text " placeholder="验证码 " />
+						<br />
+						<input class="regiter-checked " type="checkbox" checked="checked " />
+						<span>我已阅读并同意《时尚起义用户使用条款》</span>
+					</div>
+					<div class="regiter-btn ">
+						<strong>注册<br><span>(送5元现金)</span></strong>
+						<em class="login-em ">老用户登录</em>
+					</div>
+				</div>
+				<div class="register-vip ">
+					<div class="register-step clear ">
+						<div>
+							<span>①</span>
+							<br>
+							<strong>填写会员信息</strong>
+							<br>请如实填写信息<br>便于联系
+						</div>
+						<div>
+							<span>②</span>
+							<br>
+							<strong>发送资料</strong>
+							<br>发送身份证、营业执照或店铺地址至<br>
+							<a href="javascript:;">shishangqiyi_2010@126.com</a> (注明注册ID)
+						</div>
+						<div>
+							<span>③</span>
+							<br>
+							<strong>客服审核</strong>
+							<br>请耐心等待审核<br>审核通过即可登录
+						</div>
+					</div>
+					<div class="register-check ">
+						<p></p>
+						<input class="eal e-mail" type="text" placeholder="电子邮件 " />
+						<p></p>
+						<input class="psd " type="password" placeholder="您的密码 " />
+
+						<input type="password" placeholder="再次输入确认密码 " />
+						<p></p>
+						<input class="nae " placeholder="用户名 " type="text" />
+						<select>
+							<option selected="selected ">性别</option>
+							<option>男</option>
+							<option>女</option>
+						</select>
+						<p></p>
+						<input class="tel " placeholder="手机号码 " />
+						<input class="regword1 " type="text" />
+						<input class="regword2 " type="text " placeholder="验证码 " />
+						<p></p>
+						<input class="eal adress" placeholder="您的详细地址 " />
+						<input class="regiter-checked " type="checkbox" checked="checked " />
+						<span>我已阅读并同意《时尚起义用户使用条款》</span>
+						<em class="login-em ">老用户登录</em>
+					</div>
+					<div class="regiter-btn ">
+						<strong>批发会员注册</strong>
+					</div>
+				</div>
+
+				<div class="login-tip clear ">
+					<input type="checkbox" checked="checked " />
+					<span>保存电子邮件</span>
+					<div class="pian ">
+						<a href="javascript:;">扫码登录 |</a>
+						<a class="cur " href="javascript:;">新用户注册</a>
+						|
+						<a href="javascript:;">忘记密码</a>
+						<a href="javascript:;">| 支付宝登录</a>
+					</div>
+				</div>
+				<i class="iconfont ">&#xe621;</i>
+			</div>
+		</div>
+
+		<script src="js/jquery-1.11.0.js " type="text/javascript " charset="utf-8 "></script>
+		<script src="js/magnifier.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/template.js " type="text/javascript " charset="utf-8 "></script>
+		<script src="js/lunbo.js " type="text/javascript " charset="utf-8 "></script>
+		<script src="js/common_register_login.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/productionDetail.js " type="text/javascript " charset="utf-8 "></script>
+
+	</body>
+
+</html>
