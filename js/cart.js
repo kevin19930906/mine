@@ -178,14 +178,14 @@ $(function() {
 	});
 
 	/*引入尾部*/
-	$("#guarantee").load("../common.html #guarantee");
-	$(".bottom").load("../common.html .bottom");
+	$("#guarantee").load("common.html #guarantee");
+	$(".bottom").load("common.html .bottom");
 
 	/*引入头部导航栏*/
-	$(".top_bar").load("../common.html .top_bar");
+	$(".top_bar").load("common.html .top_bar");
 
 	/*引入下角固定页*/
-	$(".bottom-fixed").load("../common.html .bottom-fixed", function() {
+	$(".bottom-fixed").load("common.html .bottom-fixed", function() {
 		$(".fixBtn").click(function() {
 			$('html,body').animate({ scrollTop: 0 }, 1000);
 		})
