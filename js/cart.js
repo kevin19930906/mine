@@ -204,7 +204,7 @@ $(function() {
 	})
 
 	//生成购物车数据
-	$.get("../json/index.json", function(data) {
+	$.get("json/index.json", function(data) {
 		//取cookie的值
 		var cartStr = $.cookie("cart")
 		cartStr = cartStr ? cartStr : "[]";
